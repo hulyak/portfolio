@@ -3,7 +3,21 @@ import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
 
-export const Blogs = () => {
-  return <h2>blog list section</h2>
+export const Blogs = ({ blogs, showLink, title }) => {
+  return (
+    <section className="section">
+      <Title title={title} />
+      <div className="section-center blogs-center">
+        {blogs.map((blog, index) => (
+          <Blog key={blog.id} index={index} {...blog} />
+        ))}
+      </div>
+      {showLink && (
+        <Link to="/blog" className="btn center-btn">
+          blog
+        </Link>
+      )}
+    </section>
+  )
 }
 export default Blogs
