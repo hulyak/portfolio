@@ -34,4 +34,5 @@ Blog.propTypes = {
   image: PropTypes.object.isRequired,
 }
 
+
 export default Blog
