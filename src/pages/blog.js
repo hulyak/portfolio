@@ -21,9 +21,8 @@ export const query = graphql`
   {
     allStrapiBlogs {
       nodes {
-        created_at
         date(formatString: "MMMM Do, YYYY")
-        desc
+        description
         id
         image {
           childImageSharp {

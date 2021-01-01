@@ -9,7 +9,7 @@ import Blogs from "../components/Blogs"
 export default ({ data }) => {
   const {
     allStrapiProjects: { nodes: projects },
-    allStrapiBlogs: { nodes: blogs },
+    allStrapiBlogs : {nodes : blogs}
   } = data
 
   return (
@@ -47,10 +47,11 @@ export const query = graphql`
 
     allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
-        created_at
-        date(formatString: "MMMM Do, YYYY")
-        desc
-        id
+        description
+        title
+        slug
+        date(formatString: "MMM Do, YYYY")
+        category
         image {
           childImageSharp {
             fluid {
@@ -58,10 +59,6 @@ export const query = graphql`
             }
           }
         }
-        slug
-        content
-        title
-        category
       }
     }
   }

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 
-const Blog = ({ date, desc, id, image, slug, title, category }) => {
+const Blog = ({ date, description, id, image, slug, title, category }) => {
   return (
     <Link to={`/blogs/${slug}`} key={id} className="blog">
       {/* link dynamically to each blog post */}
@@ -13,7 +13,7 @@ const Blog = ({ date, desc, id, image, slug, title, category }) => {
         )}
         <div className="blog-card">
           <h4>{title}</h4>
-          <p>{desc}</p>
+          <p>{description}</p>
           <div className="blog-footer">
             <p>{category}</p>
             <p>{date}</p>
@@ -26,7 +26,7 @@ const Blog = ({ date, desc, id, image, slug, title, category }) => {
 
 Blog.propTypes = {
   id: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
