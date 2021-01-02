@@ -14,8 +14,8 @@ module.exports = {
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
   flags: {
-  THE_FLAG: false
-},
+    THE_FLAG: false,
+  },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -37,6 +37,26 @@ module.exports = {
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`projects`, `blogs`],
         singleTypes: [`about`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["400", "700"],
+              //subsets: ['latin']
+              //text: 'Hello'
+              //fontDisplay: 'swap',
+              //strategy: 'selfHosted' // 'base64' || 'cdn'
+            },
+            {
+              family: `Open Sans`,
+            },
+          ],
+        },
       },
     },
     // {
