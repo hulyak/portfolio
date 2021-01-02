@@ -8,6 +8,13 @@ const Blog = ({
     allStrapiBlogs: { nodes: blogs },
   },
 }) => {
+
+    async function getArticle() {
+        const response = await fetch('https://dev.to/api/articles?username=hulyakarakaya');
+        const data = await response.json();
+        console.log(data);
+    }
+
   return (
     <Layout>
       <section className="blog-page">

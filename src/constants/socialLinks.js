@@ -1,10 +1,13 @@
 import React from "react"
+import resume from '../assets/hulya-karakaya.pdf';
+
 import {
   FaGithub,
   FaLinkedin,
   FaDev,
   FaInbox,
   FaTwitterSquare,
+  FaDownload
 } from "react-icons/fa"
 
 const data = [
@@ -17,6 +20,11 @@ const data = [
     id: 2,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
     url: "https://www.linkedin.com/in/hulya-karakaya/",
+  },
+  {
+    id: 3,
+    icon: <FaDownload className="social-icon"></FaDownload>,
+    url: resume,
   },
   {
     id: 3,
