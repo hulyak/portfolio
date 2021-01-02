@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
+import gfm from "remark-gfm";
 import SEO from "../components/SEO"
 
 const ComponentName = ({ data }) => {
@@ -13,7 +14,7 @@ const ComponentName = ({ data }) => {
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
-            <ReactMarkdown source={content} />
+            <ReactMarkdown children={content} plugins={[gfm]} />
           </article>
           <Link to="/blog" className="btn center-btn">
             blog
