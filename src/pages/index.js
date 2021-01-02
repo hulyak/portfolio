@@ -5,6 +5,7 @@ import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
+import SEO from "../components/SEO";
 
 export default ({ data }) => {
   const {
@@ -16,7 +17,8 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <Hero />
+    <SEO title="Home" description="home page for Hulya Karakaya" />
+      <Hero /> 
       <Services />
       <Projects projects={projects} title="featured projects" showLink />
       <Blogs blogs={blogs} title="latests blogs" showLink />
