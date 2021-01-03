@@ -11,7 +11,7 @@ module.exports = {
     author: "hulya karakaya",
     twitterUsername: "@hulyakarakayaa",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://hulyak.netlify.app/",
   },
   flags: {
     THE_FLAG: false,
