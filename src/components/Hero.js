@@ -15,7 +15,7 @@ const particlesOptions = {
       },
     },
     color: {
-      value: "#000",
+      value: "#2caeba",
     },
     opacity: {
       value: 0.5,
