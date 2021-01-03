@@ -42,7 +42,7 @@ const particlesOptions = {
 
 const query = graphql`
   {
-    file(relativePath: { eq: "hero-img.jpg"  }) {
+    file(relativePath: { eq: "hero-img.png"  }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
