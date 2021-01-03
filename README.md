@@ -3,7 +3,7 @@
 
 [![Gatsby](https://img.shields.io/badge/Gatsby-Built-brightgreen)](https://img.shields.io/)
 
-[![Strapi](https://img.shields.io/badge/Strapi-CMS-yellow](https://img.shields.io/)
+[![Strapi](https://img.shields.io/badge/Strapi-CMS-yellow)](https://img.shields.io/)
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
