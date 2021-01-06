@@ -29,7 +29,7 @@ const data = [
   {
     id: 3,
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com/hulyakarakayaa",
+    url: "https://twitter.com/hulyakarkya",
   },
   {
     id: 4,
