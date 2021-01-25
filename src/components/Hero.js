@@ -3,42 +3,6 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
-import Particles from "react-particles-js"
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 400,
-      density: {
-        enable: true,
-        value_area: 1000,
-      },
-    },
-    color: {
-      value: "#2caeba",
-    },
-    opacity: {
-      value: 0.5,
-      anim: {
-        enable: true,
-      },
-    },
-    size: {
-      value: 7,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 3,
-      },
-    },
-    line_linked: {
-      enable: false,
-    },
-    move: {
-      speed: 0.2,
-    },
-  },
-}
 
 const query = graphql`
   {
@@ -61,7 +25,6 @@ const Hero = () => {
   // console.log(data);
   return (
     <header className="hero">
-      <Particles id="particles-js" params={particlesOptions} />
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
