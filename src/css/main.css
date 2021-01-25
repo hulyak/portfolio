@@ -129,110 +129,7 @@ pre[class*='language-'] {
   width: 0px;
 }
 
-/* Code blocks */
-pre[class*='language-'] {
-  overflow: auto;
-  padding: 1.3125rem;
-}
 
-pre[class*='language-']::-moz-selection {
-  /* Firefox */
-  background: hsl(207, 4%, 16%);
-}
-
-pre[class*='language-']::selection {
-  /* Safari */
-  background: hsl(207, 4%, 16%);
-}
-
-/* Text Selection colour */
-pre[class*='language-']::-moz-selection,
-pre[class*='language-'] ::-moz-selection {
-  text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
-}
-
-pre[class*='language-']::selection,
-pre[class*='language-'] ::selection {
-  text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
-}
-
-/* Inline code */
-:not(pre) > code[class*='language-'] {
-  border-radius: 0.3em;
-  background: var(--inlineCode-bg);
-  color: var(--inlineCode-text);
-  /* padding: 0.15em 0.2em 0.1em; */
-  padding: 0.2rem 0.25rem;
-  white-space: normal;
-}
-
-.token.attr-name {
-  color: rgb(173, 219, 103);
-  font-style: italic;
-}
-
-.token.comment {
-  color: rgb(128, 147, 147);
-}
-
-.token.string,
-.token.url {
-  color: rgb(173, 219, 103);
-}
-
-.token.variable {
-  color: rgb(214, 222, 235);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
-.token.builtin,
-.token.char,
-.token.constant,
-.token.function {
-  color: rgb(130, 170, 255);
-}
-
-.token.punctuation {
-  color: rgb(199, 146, 234);
-}
-
-.token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: 'italic';
-}
-
-.token.class-name {
-  color: rgb(255, 203, 139);
-}
-
-.token.tag,
-.token.operator,
-.token.keyword {
-  color: #ffa7c4;
-}
-
-.token.boolean {
-  color: rgb(255, 88, 116);
-}
-
-.token.property {
-  color: rgb(128, 203, 196);
-}
-
-.token.namespace {
-  color: rgb(178, 204, 214);
-}
-
-pre[data-line] {
-  padding: 1em 0 1em 3em;
-  position: relative;
-}
 
 @media screen and (min-width: 800px) {
   h1 {
@@ -1221,9 +1118,10 @@ Blog Template
   color: var(--clr-primary-5);
   margin: 2rem 0;
 }
+
 .blog-template pre {
   background: #222;
-  color: blue;
+  color: #eee;
   overflow-x: scroll;
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
@@ -1231,8 +1129,114 @@ Blog Template
 }
 
 .blog-template p img {
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
   margin: 0 0;
   object-fit: cover;
+}
+
+
+/* Code blocks */
+.blog-template pre[class*='language-'] {
+  overflow: auto;
+  padding: 1.3125rem;
+}
+
+.blog-template pre[class*='language-']::-moz-selection {
+  /* Firefox */
+  background: hsl(207, 4%, 16%);
+}
+
+.blog-template pre[class*='language-']::selection {
+  /* Safari */
+  background: hsl(207, 4%, 16%);
+}
+
+/* Text Selection colour */
+.blog-template pre[class*='language-']::-moz-selection,
+.blog-template pre[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+.blog-template pre[class*='language-']::selection,
+.blog-template pre[class*='language-'] ::selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+/* Inline code */
+.blog-template:not(pre) > code[class*='language-'] {
+  border-radius: 0.3em;
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode-text);
+  /* padding: 0.15em 0.2em 0.1em; */
+  padding: 0.2rem 0.25rem;
+  white-space: normal;
+}
+
+.blog-template.token.attr-name {
+  color: rgb(173, 219, 103);
+  font-style: italic;
+}
+
+.blog-template.token.comment {
+  color: rgb(128, 147, 147);
+}
+
+.blog-template.token.string,
+.blog-template.token.url {
+  color: rgb(173, 219, 103);
+}
+
+.blog-template.token.variable {
+  color: rgb(214, 222, 235);
+}
+
+.blog-template.token.number {
+  color: rgb(247, 140, 108);
+}
+
+.blog-template.token.builtin,
+.blog-template.token.char,
+.blog-template.token.constant,
+.blog-template.token.function {
+  color: rgb(130, 170, 255);
+}
+
+.blog-template.token.punctuation {
+  color: rgb(199, 146, 234);
+}
+
+.blog-template.token.selector,
+.blog-template.token.doctype {
+  color: rgb(199, 146, 234);
+  font-style: 'italic';
+}
+
+.blog-template.token.class-name {
+  color: rgb(255, 203, 139);
+}
+
+.blog-template.token.tag,
+.blog-template.token.operator,
+.blog-template.token.keyword {
+  color: #ffa7c4;
+}
+
+.blog-template.token.boolean {
+  color: rgb(255, 88, 116);
+}
+
+.blog-template.token.property {
+  color: rgb(128, 203, 196);
+}
+
+.blog-template.token.namespace {
+  color: rgb(178, 204, 214);
+}
+
+.blog-template pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative;
 }
