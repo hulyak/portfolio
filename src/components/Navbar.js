@@ -1,9 +1,9 @@
 import React from "react"
-import logo from "../assets/logo.svg"
+import logo from "../../static/favicon-32x32.png"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 
-const Navbar = ({toggleSidebar}) => {
+const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
       <div className="nav-center">
