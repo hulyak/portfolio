@@ -3,7 +3,8 @@
 Fonts
 ===============
 */
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap");
 
 /*
 =============== 
@@ -39,7 +40,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-secondary: "Lato", sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.2rem;
   --radius: 0.25rem;
@@ -61,14 +62,23 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-white);
   color: var(--clr-grey-1);
-  line-height: 1.5;
+  line-height: 1.2;
   font-size: 0.875rem;
-  margin-top: 5rem;
+  margin: 5rem auto 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 ul {
   list-style-type: none;
 }
@@ -103,8 +113,8 @@ p {
   color: var(--clr-grey-3);
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*="language-"],
+pre[class*="language-"] {
   color: white;
   background: none;
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
@@ -116,11 +126,9 @@ pre[class*='language-'] {
   word-wrap: normal;
   line-height: 1.5;
   margin-bottom: 0;
-
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -128,8 +136,6 @@ pre[class*='language-'] {
   /* I don't know what this is and why this sooortta works */
   width: 0px;
 }
-
-
 
 @media screen and (min-width: 800px) {
   h1 {
@@ -469,14 +475,12 @@ Hero
   margin-top: 1.25rem;
 }
 
-
 #particles-js {
   position: fixed;
   top: 0;
   right: 0;
   z-index: -1;
 }
-
 
 @media screen and (min-width: 992px) {
   .hero::before {
@@ -504,37 +508,36 @@ Hero
     grid-row: 1/1;
     grid-column: 6/-1;
     -webkit-animation: rotate-scale-up 0.65s linear both;
-	        animation: rotate-scale-up 0.65s linear both;
+    animation: rotate-scale-up 0.65s linear both;
   }
   @-webkit-keyframes rotate-scale-up {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+      transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+      transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+      transform: scale(1) rotateZ(360deg);
+    }
   }
-  50% {
-    -webkit-transform: scale(2) rotateZ(180deg);
-            transform: scale(2) rotateZ(180deg);
+  @keyframes rotate-scale-up {
+    0% {
+      -webkit-transform: scale(1) rotateZ(0);
+      transform: scale(1) rotateZ(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateZ(180deg);
+      transform: scale(2) rotateZ(180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateZ(360deg);
+      transform: scale(1) rotateZ(360deg);
+    }
   }
-  100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-            transform: scale(1) rotateZ(360deg);
-  }
-}
-@keyframes rotate-scale-up {
-  0% {
-    -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
-  }
-  50% {
-    -webkit-transform: scale(2) rotateZ(180deg);
-            transform: scale(2) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotateZ(360deg);
-            transform: scale(1) rotateZ(360deg);
-  }
-}
-
 }
 @media screen and (min-width: 1170px) {
   .hero h4 {
@@ -829,10 +832,12 @@ Blog
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
+
 .blog:hover {
   box-shadow: var(--dark-shadow);
   transform: scale(1.02);
 }
+
 .blog article {
   height: 100%;
   display: grid;
@@ -875,6 +880,7 @@ Blog
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
+
 @media screen and (min-width: 576px) {
   .blogs-center {
     display: grid;
@@ -885,6 +891,7 @@ Blog
     height: 17.5rem;
   }
 }
+
 @media screen and (min-width: 850px) {
   .blog-img {
     height: 13.75rem;
@@ -1036,9 +1043,11 @@ Contact Page
   padding-top: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 .form-group {
   padding: 1rem 1.5rem;
 }
+
 .form-control {
   display: block;
   width: 100%;
@@ -1072,32 +1081,34 @@ Blog Template
 */
 .blog-template {
   padding: 2rem 0;
+  margin: 0 auto;
+  background-color: var(-clr-grey-10);
 }
 
 .blog-template h1,
 .blog-template h2 {
-  text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-size: calc(2rem + 2vw);
+  letter-spacing: 0.3;
 }
 
 .blog-template > p:first-child:first-letter {
-    color: #903;
-    float: left;
-    font-weight: bolder;
-    font-size: 3rem;
-    line-height: 0.7rem;
-    padding: 1.2rem 0.7rem 0.4rem 0;
+  color: #903;
+  float: left;
+  font-weight: bolder;
+  font-size: 3rem;
+  line-height: 0.7rem;
+  padding: 1.2rem 0.7rem 0.4rem 0;
 }
 
- .blog-template blockquote p {
-    font-style: italic;
-    font-size: 1.2rem;
-  }
+.blog-template blockquote p {
+  font-style: italic;
+  font-size: 1.2rem;
+}
 
 .blog-template ul {
-  /* margin-top: 2rem; */
+  margin-top: 0.2rem;
   display: inline-block;
 }
 
@@ -1107,7 +1118,12 @@ Blog Template
   /* padding: 0.5rem 1rem; */
   /* margin: 1rem 0; */
   /* text-transform: uppercase; */
-  list-style-type : square;
+  list-style-type: square;
+}
+
+.blog-template ul li img {
+  width: 100%;
+  margin-top: 0.8rem;
 }
 
 .blog-template blockquote {
@@ -1125,48 +1141,51 @@ Blog Template
   overflow-x: scroll;
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
-  border: 1px solid var(--clr-primary-8:);
+  border: 1px solid var(--clr-primary-8);
 }
 
-.blog-template p img {
+.blog-content p img {
+  max-width: 1280px;
   width: 100%;
-  height: 100%;
-  margin: 0 0;
+  margin: 1.5rem auto 1rem;
   object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transition: opacity 500ms ease 0s;
 }
-
 
 /* Code blocks */
-.blog-template pre[class*='language-'] {
+.blog-template pre[class*="language-"] {
   overflow: auto;
   padding: 1.3125rem;
+  background: rgb(103, 184, 130);
 }
 
-.blog-template pre[class*='language-']::-moz-selection {
+.blog-template pre[class*="language-"]::-moz-selection {
   /* Firefox */
   background: hsl(207, 4%, 16%);
 }
 
-.blog-template pre[class*='language-']::selection {
+.blog-template pre[class*="language-"]::selection {
   /* Safari */
   background: hsl(207, 4%, 16%);
 }
 
 /* Text Selection colour */
-.blog-template pre[class*='language-']::-moz-selection,
-.blog-template pre[class*='language-'] ::-moz-selection {
+.blog-template pre[class*="language-"]::-moz-selection,
+.blog-template pre[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
 
-.blog-template pre[class*='language-']::selection,
-.blog-template pre[class*='language-'] ::selection {
+.blog-template pre[class*="language-"]::selection,
+.blog-template pre[class*="language-"] ::selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
 
 /* Inline code */
-.blog-template:not(pre) > code[class*='language-'] {
+.blog-template:not(pre) > code[class*="language-"] {
   border-radius: 0.3em;
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
@@ -1211,7 +1230,7 @@ Blog Template
 .blog-template.token.selector,
 .blog-template.token.doctype {
   color: rgb(199, 146, 234);
-  font-style: 'italic';
+  font-style: "italic";
 }
 
 .blog-template.token.class-name {
